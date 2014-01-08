@@ -54,7 +54,7 @@ module Forge
     # @return [void]
     def clean_template(path)
       dest = template_destination(path)
-      dest.unlink if dest.exist? && path.to_s !~ /functions\.php|includes\//
+      dest.unlink if dest.exist? && path.to_s !~ /functions\.php|inc\//
     end
 
     # Copies all templates to the build directory
@@ -115,7 +115,7 @@ module Forge
     #
     # @return [void]
     def clean_includes
-      FileUtils.rm_r @project.build_path.join('includes')
+      FileUtils.rm_r @project.build_path.join('inc')
     end
 
     # Copies all includes to the build directory
@@ -126,7 +126,7 @@ module Forge
 
       paths = Dir.glob(@project.includes_path.join('**', '*'))
       if !paths.empty?
-        dest = @project.build_path.join('includes')
+        dest = @project.build_path.join('inc')
         FileUtils.mkdir(dest) unless dest.directory?
         FileUtils.cp_r(paths, dest)
       end

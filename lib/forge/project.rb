@@ -100,7 +100,7 @@ module Forge
 
     # @return [Pathname]
     def includes_path
-      source_path.join('includes')
+      source_path.join('inc')
     end
 
     # @return [Pathname]
