@@ -6,10 +6,6 @@
 
 Current Version: **0.6.1**
 
-Install Forge (requires [Ruby](http://www.ruby-lang.org/) and [RubyGems](http://rubygems.org/)):
-
-    $ gem install forge
-
 Create your new theme project:
 
     $ forge create your_theme
